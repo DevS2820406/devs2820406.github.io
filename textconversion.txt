@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h1 style="text-align: center;">This page is used for conversion of text into UpperCase and LowerCase</h1>
+        <label for="name">Enter Your Text</label>
+        <br />
+        <textarea
+        id="user_text"
+        placeholder="Enter the text for conversion"
+        rows="3"
+        cols="30"
+        ></textarea>
+        <br />
+        <button onclick="getUppercase()">UpperCase</button>
+        <button onclick="getLowercase()">LowerCase</button>
+        <button onclick="clear_userinput()">Clear</button>
+    </div>
+    </p>
+    <script>
+        const getUppercase = () => {
+        let user_text = document.getElementById('user_text')
+        user_text.value = user_text.value.toUpperCase()
+        }
+        const getLowercase = () => {
+        let user_text = document.getElementById('user_text')
+        user_text.value = user_text.value.toLowerCase()
+        }
+        const clear_userinput = () => {
+        document.getElementById('user_text').value = ''
+        }
+    </script>
+</body>
+</html>
