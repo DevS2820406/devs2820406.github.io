@@ -1,0 +1,9 @@
+print("Please enter the lengths of the triangle sides: ")
+x = int(input("First_side: "))
+y = int(input("Second_side: "))
+z = int(input("Third_side: "))
+
+if x == y == z:
+	print("The triangl is Equilateral triangle")
+else:
+    print("It is not an equilateral triangle")
