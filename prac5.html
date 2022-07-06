@@ -78,17 +78,7 @@ p {
     padding: 0 5%;
 }
 </style>
-<script>
-    let count = document.getElementById('count')
-    let current_count = localStorage.getItem('count')
-    if(current_count > 0){
-        count.innerHTML = current_count
-        localStorage.setItem('count', parseInt(current_count) + 1)
-    }else{
-        localStorage.setItem('count', 1)
-        count.innerHTML = 1
-    }
-</script>
+
 <body style="background-color:rgb(246, 241, 241);">
 <h1 style="color:black ;">You will see a Tickertape on the bottom of the page</h1>
     <div class="ticker-wrap">
@@ -100,4 +90,15 @@ p {
         </div>
     </div> 
 </body>
+<script>
+    let count = document.getElementById('count')
+    let current_count = localStorage.getItem('count')
+    if(current_count > 0){
+        count.innerHTML = current_count
+        localStorage.setItem('count', parseInt(current_count) + 1)
+    }else{
+        localStorage.setItem('count', 1)
+        count.innerHTML = 1
+    }
+</script>
 </html>
