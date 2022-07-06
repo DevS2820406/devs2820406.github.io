@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <button type="button" onclick="change_bg()">Change Background Color</button>
+        <button type="button" onclick="change_font_size()">Change Font Size</button>
+        <button type="button" onclick="change_font_color()">Change Color</button>
+        <button type="button" onclick="change_align_center()">Align Text Center</button>
+        <a onclick="remove_underline()">Remove Underlines</a>
+    </section>
+
+    <H1 id="main">Hello welcome to the site.</H1>
+    
+    <script>
+        const change_bg = () => {
+            document.getElementById('main').style.backgroundColor = "#2d2d2d"
+        }
+        const change_font_size = () => {
+            document.getElementById('main').style.fontSize = "30px"
+        }
+        const change_font_color = () => {
+            document.getElementById("main").style.color = "#b5e853"
+        }
+        const change_align_center = () => {
+            document.getElementById('main').style.textAlign = "center"
+        }
+        const remove_underline = () => {
+            document.querySelector('a').style.setProperty('border-bottom', 'none', 'important');
+        }
+    </script>
+</body>
+</html>
