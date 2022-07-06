@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body style="background-color:grey ;">
+    <h1 style="text-align:center ;">Write program in Java Script for pattern matching using regular expressions.</h1>
+    <section>
+    <textarea placeholder="Enter Your Text" id="user_text" cols="30" rows="5" style="margin-left: 100px;"></textarea>
+    <br>
+    <input type="text" placeholder="What You Want To Search..." id="search" style="width: 307px;margin-left: 100px;">
+    <br>
+    <br>
+    <button type="submit" onclick="handle_search()" style="margin-left: 100px;">Search</button>
+    <span style="color: white;" id="output"></span>
+    </section>
+
+</body>
+
+<script>
+    let user_text = document.getElementById('user_text')
+    let search_query = document.getElementById('search')
+    let output = document.getElementById('output')
+    const handle_search = () => {
+        if(user_text.value.length > 0 && search_query.value.length > 0){
+            let regex_query = new RegExp(search_query.value, "ig");
+            if(regex_query.test(user_text.value)){
+                output.innerHTML = "Exist"
+            }else{
+                output.innerHTML = "Not Exist"
+            }
+        }else{
+            return false
+        }
+    }
+</script>
+</html>
+
