@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  background-color: grey;
+  color: aliceblue;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<section>
+    <p>Tap on the "Click me" button to toggle between hiding and showing the middle section element:</p>
+</section>
+
+
+<section>
+<div id="myDIV">
+    <h1>Hobbies</h1>
+    <ul>
+    <li>To learn new Programming languages</li>
+    <li>To research about different topics</li>
+    <li>To sharpen up the skills</li>
+    <li>To play video games</li>
+    <li>Listeing Music</li>
+    
+    </ul>  
+    <br>
+    
+</div>
+</section>
+<br>
+<br>
+<section>
+<button onclick="myFunction()">Try it </button>
+</section>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
